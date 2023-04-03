@@ -68,7 +68,7 @@ BEGIN
       DEFAULT 0 ,
       CreatedDatetime datetime
       DEFAULT GETDATE()
-   )
+   );
    CREATE TABLE Cards (
       PK_CardID int IDENTITY (1 ,1) ,
       AK_CardNo varchar(16) NOT NULL ,
@@ -82,7 +82,7 @@ BEGIN
       DEFAULT 0 ,
       CreatedDatetime datetime
       DEFAULT GETDATE()
-   )
+   );
    CREATE TABLE VehicleTypes (
       PK_VehicleTypeID int IDENTITY (1 ,1) ,
       VehicleType varchar(90) ,
@@ -90,7 +90,7 @@ BEGIN
       DEFAULT 0 ,
       CreatedDatetime datetime
       DEFAULT GETDATE()
-   )
+   );
    CREATE TABLE Drivers (
       PK_DriverID int IDENTITY (1 ,1) ,
       AK_TcNo char(11) NOT NULL ,
@@ -105,7 +105,7 @@ BEGIN
       DEFAULT 0 ,
       CreatedDatetime datetime
       DEFAULT GETDATE()
-   )
+   );
    CREATE TABLE DriverVehicleAppointments (
       PK_AppointmentID int IDENTITY (1 ,1) ,
       FK_DriverID int ,
@@ -116,7 +116,7 @@ BEGIN
       DEFAULT 0 ,
       CreatedDatetime datetime
       DEFAULT GETDATE()
-   )
+   );
    CREATE TABLE Shifts (
       PK_ShiftID int IDENTITY (1 ,1) ,
       CHK_ShiftType char(1) CHECK (CHK_ShiftType = 'M'
@@ -130,7 +130,7 @@ BEGIN
       DEFAULT 0 ,
       CreatedDatetime datetime
       DEFAULT GETDATE()
-   )
+   );
    CREATE TABLE ShiftsDrivers (
       PK_DriverShiftID int IDENTITY (1 ,1) ,
       FK_DriverID int ,
@@ -139,7 +139,7 @@ BEGIN
       DEFAULT 0 ,
       CreatedDatetime datetime
       DEFAULT GETDATE()
-   )
+   );
    CREATE TABLE CardLoadings (
       PK_CardLoadingID int IDENTITY (1 ,1) ,
       AK_InvoiceNo varchar(30) NOT NULL ,
@@ -151,7 +151,7 @@ BEGIN
       DEFAULT 0 ,
       CreatedDatetime datetime
       DEFAULT GETDATE()
-   )
+   );
    CREATE TABLE DriverContacts (
       PK_DriverContactID int IDENTITY (1 ,1) ,
       DriverPhone char(10) ,
@@ -162,7 +162,7 @@ BEGIN
       DEFAULT 0 ,
       CreatedDatetime datetime
       DEFAULT GETDATE()
-   )
+   );
    CREATE TABLE Complaints (
       PK_ComplaintID int IDENTITY (1 ,1) ,
       IncidentDate datetime
@@ -178,7 +178,7 @@ BEGIN
       DEFAULT 0 ,
       CreatedDatetime datetime
       DEFAULT GETDATE()
-   )
+   );
    CREATE TABLE Vehicles (
       PK_VehicleID int IDENTITY (1 ,1) ,
       AK_LicencePlate varchar(15) NOT NULL ,
@@ -196,7 +196,7 @@ BEGIN
       DEFAULT 0 ,
       CreatedDatetime datetime
       DEFAULT GETDATE()
-   )
+   );
    CREATE TABLE BusLines (
       PK_BusLineID int IDENTITY (1 ,1) ,
       AK_BusLineCode varchar(6) NOT NULL ,
@@ -205,7 +205,7 @@ BEGIN
       DEFAULT 0 ,
       CreatedDatetime datetime
       DEFAULT GETDATE()
-   )
+   );
    CREATE TABLE PassengerVehicles (
       PK_PassengerVehicleID int IDENTITY (1 ,1) ,
       FK_PassengerID int ,
@@ -216,7 +216,7 @@ BEGIN
       DEFAULT 0 ,
       CreatedDatetime datetime
       DEFAULT GETDATE()
-   )
+   );
    CREATE TABLE Departures (
       PK_DepartureID int IDENTITY (1 ,1) ,
       Date date ,
@@ -226,7 +226,7 @@ BEGIN
       DEFAULT 0 ,
       CreatedDatetime datetime
       DEFAULT GETDATE()
-   )
+   );
    CREATE TABLE Neighbourhoods (
       PK_NeighbourhoodID int IDENTITY (1 ,1) ,
       NeighbourhoodName varchar(100) ,
@@ -235,7 +235,7 @@ BEGIN
       DEFAULT 0 ,
       CreatedDatetime datetime
       DEFAULT GETDATE()
-   )
+   );
    CREATE TABLE BusStops (
       PK_BusStopID int IDENTITY (1 ,1) ,
       AK_BusStopCode varchar(6) NOT NULL ,
@@ -245,7 +245,7 @@ BEGIN
       DEFAULT 0 ,
       CreatedDatetime datetime
       DEFAULT GETDATE()
-   )
+   );
    CREATE TABLE Routes_ (
       PK_RouteID int IDENTITY (1 ,1) ,
       FK_BusStopID int ,
@@ -254,7 +254,7 @@ BEGIN
       DEFAULT 0 ,
       CreatedDatetime datetime
       DEFAULT GETDATE()
-   )
+   );
    CREATE TABLE Passengers (
       PK_PassengerID int IDENTITY (1 ,1) ,
       AK_TcNo char(11) NOT NULL ,
@@ -271,7 +271,7 @@ BEGIN
       DEFAULT 0 ,
       CreatedDatetime datetime
       DEFAULT GETDATE()
-   )
+   );
    CREATE TABLE CardTypes (
       PK_CardTypeID int IDENTITY (1 ,1) ,
       CardType varchar(30) ,
@@ -281,7 +281,7 @@ BEGIN
       DEFAULT 0 ,
       CreatedDatetime datetime
       DEFAULT GETDATE()
-   )
+   );
 
    ALTER TABLE Cities ADD CONSTRAINT PK_Cities PRIMARY KEY (PK_CityID)
    ALTER TABLE LoadingStations ADD CONSTRAINT PK_LoadingStations PRIMARY KEY (PK_LoadingStationID)
