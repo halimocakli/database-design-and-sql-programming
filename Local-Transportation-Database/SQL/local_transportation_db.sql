@@ -38,6 +38,7 @@ BEGIN
 		LoadingStationName VARCHAR(200),
 		AuthorizedName VARCHAR(100) NOT NULL,
 		AuthorizedSurname VARCHAR(100) NOT NULL,
+		AuthorizedPhone VARCHAR(10) NOT NULL,
 		x_Coordinate VARCHAR(20),
 		y_Coordinate VARCHAR(20),
 		FK_NeighbourhoodID INT,
@@ -84,7 +85,7 @@ BEGIN
 		AK_CardNo VARCHAR(16) NOT NULL,
 		Balance FLOAT
 			DEFAULT 0,
-		ExpireDate DATE,
+		CardExpireDate DATE,
 		IsActive BIT
 			DEFAULT 1,
 		FK_CardTypeID INT,
@@ -107,7 +108,7 @@ BEGIN
 	CREATE TABLE Drivers
 	(
 		PK_DriverID INT IDENTITY(1, 1),
-		AK_TcNo CHAR(11) NOT NULL,
+		AK_DriverTcNo CHAR(11) NOT NULL,
 		DriverName VARCHAR(100),
 		DriverSurname VARCHAR(100),
 		AK_DriverRegisterNo VARCHAR(20),
@@ -156,9 +157,9 @@ BEGIN
 			DEFAULT GETDATE()
 	);
 
-	CREATE TABLE CardLoadings
+	CREATE TABLE CardCreditLoadings
 	(
-		PK_CardLoadingID INT IDENTITY(1, 1),
+		PK_CardCreditLoadingID INT IDENTITY(1, 1),
 		AK_InvoiceNo VARCHAR(30) NOT NULL,
 		LoadingAmount MONEY
 			DEFAULT 0,
@@ -225,7 +226,7 @@ BEGIN
 	(
 		PK_BusLineID INT IDENTITY(1, 1),
 		AK_BusLineCode VARCHAR(6) NOT NULL,
-		Route VARCHAR(60),
+		Line VARCHAR(60),
 		IsDeleted BIT
 			DEFAULT 0,
 		CreatedDatetime DATETIME
