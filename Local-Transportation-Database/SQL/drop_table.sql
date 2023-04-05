@@ -8,7 +8,7 @@ DROP TABLE Drivers
 DROP TABLE DriverVehicleAppointments
 DROP TABLE Shifts
 DROP TABLE ShiftsDrivers
-DROP TABLE CardLoadings
+DROP TABLE CardCreditLoadings
 DROP TABLE DriverContacts
 DROP TABLE Complaints
 DROP TABLE Vehicles
