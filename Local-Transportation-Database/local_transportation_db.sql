@@ -543,8 +543,5 @@ BEGIN
 	ADD CONSTRAINT CHK_PassengerGender CHECK (CHK_PassengerGender = 'M'
 												  OR CHK_PassengerGender = 'W'
 												 );
-<<<<<<< HEAD
+
 END;
-=======
-END;
->>>>>>> 07724af97ab62e1b400ebac374ef6aa7dfad5ee0
